@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BILOG TRANSLATOR</title>
+  <style>
+    /* Existing CSS styles */
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .text {
+      font-size: 30px;
+      padding-left: 30px;
+    }
+
+    .text h1 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      display: flex;
+      align-items: center; /* Align text vertically */
+    }
+
+    .text h1 .bilog {
+      color: #ffaa00;
+    }
+
+    .text h1 .translator {
+      color: rgb(173, 169, 169);
+      margin-left: 10px; /* Added margin for spacing */
+    }
+
+    .input-box, .output-box, .definition-box {
+      width: calc(33.33% - 20px); /* Adjusted to take one-third width with padding accounted for */
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .input-box {
+      margin-right: 20px; /* Added margin to separate the input boxes */
+      margin-top: 300px; /* Added margin to separate the input boxes */
+    }
+
+    .output-box, .definition-box, .input-box {
+      border: 10px solid #ffffff;
+      margin-top: -30px;
+      margin-right: 40px;
+    }
+
+    .definition-box textarea {
+      height: 100px; /* Adjusted height */
+    }
+
+    .output-box textarea,
+    .definition-box textarea {
+      height: 50px;
+    }
+
+    label[for="language-select"] {
+      color:rgb(255, 123, 0); /* Changed color */
+    }
+
+    label[for="input-term"] {
+      color:rgb(255, 123, 0); /* Changed color */
+    }
+
+    label[for="output-result"] {
+      color:rgb(145, 145, 145); /* Changed color */
+    }
+    
+    label[for="definition"] {
+      color:rgb(145, 145, 145); /* Changed color */
+    }
+    
+    label[for="language-select"],
+    label[for="input-term"],
+    label[for="output-result"],
+    label[for="definition"] {
+      font-size: 35px; /* Increase font size for labels */
+    }
+
+    .contact-button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffaa00;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <a href="#" target="_blank" rel="noopener" title="BILOG BILOG">
+        <img
+          src="https://i.ibb.co/7Wmtnkp/BILOG-logo.png"
+          alt="BILOG LOGO"
+          width="100"
+        />
+      </a>
+    </div>
+    <div class="text">
+      <h1>
+        <span class="bilog">BILOG</span>
+        <span class="translator">TRANSLATION</span>
+      </h1>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h3 style="font-family: Helvetica; color: rgb(255, 0, 0);">
+    NOTE: Please only use lowercase letters when inputting terms
+  </h3>
+  
+  <br>
+  
+  <div class="container">
+    <div class="input-box">
+      <label for="language-select">Select Language to Translate:</label>
+      <select id="language-select" name="language-select">
+        <option value="english">English</option>
+        <option value="bicol">Bicol</option>
+      </select>
+      <br />
+      <label for="input-term" >Enter a term:</label>
+      <input type="text" id="input-term" name="input-term" />
+    </div>
+    <div class="output-box">
+      <label for="output-result">Translation:</label>
+      <textarea id="output-result" name="output-result" readonly></textarea>
+    </div>
+    <div class="definition-box">
+      <label for="definition">Definition:</label>
+      <textarea id="definition" name="definition" readonly></textarea>
+    </div>
+  </div>
+
+  <a class="contact-button" href="mailto:alupenario6@gmail.com">
+    Contact Us
+  </a>
+
+  <script>
+    const inputTerm = document.getElementById("input-term");
+    const outputResult = document.getElementById("output-result");
+    const definition = document.getElementById("definition");
+    const languageSelect = document.getElementById("language-select");
+
+    inputTerm.addEventListener("input", () => {
+      const term = inputTerm.value.trim().toLowerCase(); // Convert input to lowercase
+      const selectedLanguage = languageSelect.value;
+      if (selectedLanguage === "bicol") {
+        if (term === "paggamit nin baston" || term === "baston") { // Check for multiple terms
+          outputResult.value = "wielding";
+          definition.value = "The act of shaping metal into tools or weapons through heating and hammering.";
+        } else if (term === "bayag") {
+          outputResult.value = "testicles";
+          definition.value = "male reproductive organ";
+        } else {
+          outputResult.value = "This word has yet to be added.";
+          definition.value = "No definition found.";
+        }
+      } else if (selectedLanguage === "english") {
+        if (term === "create") {
+          outputResult.value = "himo";
+          definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
+        } else {
+          outputResult.value = "This word has yet to be added.";
+          definition.value = "No definition found.";
+        }if (term === "create") {
+  outputResult.value = "himo";
+  definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
+} else if (term === "current") {
+  outputResult.value = "dalagan";
+  definition.value = "ang kasalukuyang pag-aagos nin elektrisidad sa circuito.";
+} else if (term === "electrode") {
+  outputResult.value = "electrode";
+  definition.value = "isang patpat o batang metal na ginagamit sa welding na nagpapakain ng metal.";
+} else if (term === "snitching") {
+  outputResult.value = "pagpapahiling nin seguro";
+  definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
+} else if (term === "arc") {
+  outputResult.value = "ark";
+  definition.value = "ang singaw na nagmumula sa pagtao nin init ng electrical discharge.";
+} else if (term === "arc length") {
+  outputResult.value = "kapkad nin ark";
+  definition.value = "ang distansya hale sa electrode papalayu sa base metal.";
+} else if (term === "shielded") {
+  outputResult.value = "ginaprotectahan";
+  definition.value = "ang welding process na ginaprotektahan an ark sa pamamagitan nin gas o slag.";
+} else {
+  outputResult.value = "I have no idea what you're asking for.";
+  definition.value = "I have no idea what you're asking for.";
+}
+
+      }
+    });
+
+    languageSelect.addEventListener("change", () => {
+      inputTerm.value = ""; // Reset input term when language is changed
+      outputResult.value = ""; // Reset output
+      definition.value = ""; // Reset definition
+    });
+  </script>
+</body>
+</html> 
