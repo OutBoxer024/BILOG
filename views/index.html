@@ -1,159 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BILOG TRANSLATOR</title>
-  <style>
-    /* Existing CSS styles */
-    .container {
-      display: flex;
-      align-items: center;
-    }
+<html lang="en"
+  ><head
+    ><title>Majestic Incompatible Beaver</title
+    ><meta property="og:title" content="Majestic Incompatible Beaver" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" /><meta
+      charset="utf-8" /><meta
+      property="twitter:card"
+      content="summary_large_image" /><style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style
+    ><style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
 
-    .image {
-      max-width: 100%;
-      max-height: 100%;
-    }
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
 
-    .text {
-      font-size: 30px;
-      padding-left: 30px;
-    }
-
-    .text h1 {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      display: flex;
-      align-items: center; /* Align text vertically */
-    }
-
-    .text h1 .bilog {
-      color: #ffaa00;
-    }
-
-    .text h1 .translator {
-      color: rgb(173, 169, 169);
-      margin-left: 10px; /* Added margin for spacing */
-    }
-
-    .input-box, .output-box, .definition-box {
-      width: calc(33.33% - 20px); /* Adjusted to take one-third width with padding accounted for */
-      padding: 10px;
-      font-size: 20px;
-    }
-
-    .input-box {
-      margin-right: 20px; /* Added margin to separate the input boxes */
-      margin-top: 300px; /* Added margin to separate the input boxes */
-    }
-
-    .output-box, .definition-box, .input-box {
-      border: 10px solid #ffffff;
-      margin-top: -30px;
-      margin-right: 40px;
-    }
-
-    .definition-box textarea {
-      height: 100px; /* Adjusted height */
-    }
-
-    .output-box textarea,
-    .definition-box textarea {
-      height: 50px;
-    }
-
-    label[for="language-select"] {
-      color:rgb(255, 123, 0); /* Changed color */
-    }
-
-    label[for="input-term"] {
-      color:rgb(255, 123, 0); /* Changed color */
-    }
-
-    label[for="output-result"] {
-      color:rgb(145, 145, 145); /* Changed color */
-    }
-    
-    label[for="definition"] {
-      color:rgb(145, 145, 145); /* Changed color */
-    }
-    
-    label[for="language-select"],
-    label[for="input-term"],
-    label[for="output-result"],
-    label[for="definition"] {
-      font-size: 35px; /* Increase font size for labels */
-    }
-
-    .contact-button {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffaa00;
-      text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="image">
-      <a href="#" target="_blank" rel="noopener" title="BILOG BILOG">
-        <img
-          src="https://i.ibb.co/7Wmtnkp/BILOG-logo.png"
-          alt="BILOG LOGO"
-          width="100"
-        />
-      </a>
-    </div>
-    <div class="text">
-      <h1>
-        <span class="bilog">BILOG</span>
-        <span class="translator">TRANSLATION</span>
-      </h1>
-    </div>
-  </div>
-  
-  <hr>
-
-  <h3 style="font-family: Helvetica; color: rgb(255, 0, 0);">
-    NOTE: If you are using a phone, please turn on desktop mode.
-  </h3>
-  
-  <br>
-  
-  <div class="container">
-    <div class="input-box">
-      <label for="language-select">Select Language to Translate:</label>
-      <select id="language-select" name="language-select">
-        <option value="english">English</option>
-        <option value="bicol">Bicol</option>
-      </select>
-      <br />
-      <label for="input-term" >Enter a term:</label>
-      <input type="text" id="input-term" name="input-term" />
-    </div>
-    <div class="output-box">
-      <label for="output-result">Translation:</label>
-      <textarea id="output-result" name="output-result" readonly></textarea>
-    </div>
-    <div class="definition-box">
-      <label for="definition">Definition:</label>
-      <textarea id="definition" name="definition" readonly></textarea>
-    </div>
-  </div>
-
-  <a class="contact-button" href="mailto:alupenario6@gmail.com">
-    Contact Us
-  </a>
-
-  <script>
+      }</style
+    ><link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css" /><link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font" /><link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" /></head
+  ><body
+    ><link rel="stylesheet" href="../public/css/style.css" /><div
+      ><link href="../public/css/index.css" rel="stylesheet" /><div class="home-container"
+        ><header data-role="Header" class="home-header"
+          ><img
+            src="https://i.ibb.co/7Wmtnkp/BILOG-logo.png"
+            class="home-image" /><h1 class="home-text">BILOG</h1
+          ><h1 class="home-text01">TRANSLATE</h1
+          ><div data-role="BurgerMenu" class="home-burger-menu"
+            ><svg viewBox="0 0 1024 1024" class="home-icon">
+              <path
+                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg></div
+          ><div data-role="MobileMenu" class="home-mobile-menu"
+            ><div class="home-nav1"
+              ><div class="home-container1"
+                ><img
+                  alt="image"
+                  src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
+                  class="home-image1" /><div
+                  data-role="CloseMobileMenu"
+                  class="home-close-mobile-menu"
+                  ><svg viewBox="0 0 1024 1024" class="home-icon02">
+                    <path
+                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                    ></path></svg></div></div
+              ></div
+            ><div
+              ><svg viewBox="0 0 950.8571428571428 1024" class="home-icon04">
+                <path
+                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                ></path></svg
+              ><svg viewBox="0 0 877.7142857142857 1024" class="home-icon06">
+                <path
+                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                ></path></svg
+              ><svg viewBox="0 0 602.2582857142856 1024" class="home-icon08">
+                <path
+                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                ></path></svg></div></div></header
+        ><div class="home-testimonial"
+          ><div class="home-container2"
+            ><h1 class="home-text02"><span>PLACEHOLDER</span><br /></h1
+            ><span class="home-text05">Please select language input:</span
+            ><select id="language-select" name="language-select"
+              ><option value="english">English</option
+              ><option value="bicol">Bicol</option
+            ></select
+            ></br
+            ><div class="home-container3"
+              ><div class="home-container4"
+                ><span class="home-text06"><span>INPUT:</span><br /></span
+                ><input
+                  type="text"
+                  id="input-term" 
+                  name="input-term"
+                  placeholder="Your text / Ang iyong teksto"
+                  class="home-textinput input" /></div
+              ><div class="home-container5"
+                ><span class="home-text09"><span>TRANSLATION:</span><br /></span
+                ><textarea
+                  id="output-result" 
+                  name="output-result" 
+                  readonly
+                  class="home-textarea textarea"
+                ></textarea></div
+              ><div class="home-container6"
+                ><span class="home-text12"><span>DEFINITION:</span><br /></span
+                ><textarea
+                  id="definition" 
+                  name="definition" 
+                  readonly
+                  class="home-textarea1 textarea"
+                ></textarea></div></div></div></div
+        ><div class="home-banner"
+          ><h1 class="home-text15">ABOUT</h1
+          ><span class="home-text16"
+            >This website was created in compliance with the requirements of
+            Practical Research II.</span
+          ><a
+            href="mailto:andrewlupenario6@gmail.com?subject=Regarding BILOG Translation"
+            class="home-link button"
+            >Contact Us</a
+          ></div
+        ></div
+      ></div
+    >
+    <script>
     const inputTerm = document.getElementById("input-term");
     const outputResult = document.getElementById("output-result");
     const definition = document.getElementById("definition");
@@ -166,57 +134,372 @@
         if (term === "paggamit nin baston" || term === "baston") { // Check for multiple terms
           outputResult.value = "wielding";
           definition.value = "The act of shaping metal into tools or weapons through heating and hammering.";
-        } else if (term === "bayag") {
-          outputResult.value = "testicles";
-          definition.value = "male reproductive organ";
-        } else if (term === "puyit") {
-          outputResult.value = "ikaw";
-          definition.value = "ligo na pre";
+        } else if (term === "himo") {
+          outputResult.value = "create";
+          definition.value = "bring something into existence";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
+        } else if (term === "") {
+          outputResult.value = "";
+          definition.value = "";
         } else {
           outputResult.value = "This word has yet to be added.";
           definition.value = "No definition found.";
         }
       } else if (selectedLanguage === "english") {
-        if (term === "create") {
-          outputResult.value = "himo";
-          definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
-        } else {
-          outputResult.value = "This word has yet to be added.";
-          definition.value = "No definition found.";
-        }if (term === "create") {
-  outputResult.value = "himo";
-  definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
-} else if (term === "current") {
-  outputResult.value = "dalagan";
-  definition.value = "ang kasalukuyang pag-aagos nin elektrisidad sa circuito.";
-} else if (term === "electrode") {
-  outputResult.value = "electrode";
-  definition.value = "isang patpat o batang metal na ginagamit sa welding na nagpapakain ng metal.";
-} else if (term === "snitching") {
-  outputResult.value = "pagpapahiling nin seguro";
-  definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
-} else if (term === "arc") {
-  outputResult.value = "ark";
-  definition.value = "ang singaw na nagmumula sa pagtao nin init ng electrical discharge.";
-} else if (term === "arc length") {
-  outputResult.value = "kapkad nin ark";
-  definition.value = "ang distansya hale sa electrode papalayu sa base metal.";
-} else if (term === "shielded") {
-  outputResult.value = "ginaprotectahan";
-  definition.value = "ang welding process na ginaprotektahan an ark sa pamamagitan nin gas o slag.";
-} else {
-  outputResult.value = "I have no idea what you're asking for.";
-  definition.value = "I have no idea what you're asking for.";
-}
-
-      }
+          if (term === "create") {
+            outputResult.value = "himo";
+            definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";
+          } else if (term === "current") {
+            outputResult.value = "dalagan";
+            definition.value = "ang kasalukuyang pag-aagos nin elektrisidad sa circuito.";
+          } else if (term === "electrode") {
+            outputResult.value = "electrode";
+            definition.value = "isang patpat o batang metal na ginagamit sa welding na nagpapakain ng metal.";
+          } else if (term === "snitching") {
+            outputResult.value = "pagpapahiling nin seguro";
+            definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
+          } else if (term === "arc") {
+            outputResult.value = "ark";
+            definition.value = "ang singaw na nagmumula sa pagtao nin init ng electrical discharge.";
+          } else if (term === "arc length") {
+            outputResult.value = "kapkad nin ark";
+            definition.value = "ang distansya hale sa electrode papalayu sa base metal.";
+          } else if (term === "shielded") {
+            outputResult.value = "ginaprotectahan";
+            definition.value = "ang welding process na ginaprotektahan an ark sa pamamagitan nin gas o slag.";
+          } else if (term === "shield") {
+            outputResult.value = "pagprotektahan o panalagad";
+            definition.value = "ang pagprotektahan ng elektrode na ginagamit sa shielded arc.";
+          } else if (term === "current management") {
+            outputResult.value = "pamamahala nin kasalukuyan o dala";
+            definition.value = "ang paggamit nin sistema o pamamaraan para mamahala asin kontrolohon an padagos na daloy nin enerhiya o inpormasyon.";
+          } else if (term === "database management system") {
+            outputResult.value = "Database Management System";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "database") {
+            outputResult.value = "Database";
+            definition.value = "an database an naglalaman nin mga datos o impormasyon na nakapirmi sa kompyuter.";
+          } else if (term === "data") {
+            outputResult.value = "Data";
+            definition.value = "An database an naglalaman nin mga datos o impormasyon na nakapirmi sa kompyuter.";
+          } else if (term === "semantic web") {
+            outputResult.value = "Semantic Web";
+            definition.value = "An Semantic Web an nagpapahiling nin mga datos o impormasyon na may semantiko o kahulugan. Ini an nagpapahiling kan seguridad asin integridad kan datos sa database.";
+          } else if (term === "web") {
+            outputResult.value = "Web";
+            definition.value = "An web an naglalaman nin mga datos o impormasyon na nakapirmi sa kompyuter. Ini an nagpapahiling kan seguridad asin integridad kan datos sa database.";
+          } else if (term === "trimming") {
+            outputResult.value = "paggupit";
+            definition.value = "an proseso nin pag-aalis kan parte nin an tama nin materyales o bagay gamit an iskiris o iba pang kagamitan.";
+          } else if (term === "trim") {
+            outputResult.value = "gupit";
+            definition.value = "pagsalin nin materyales o bahagi nin isang bagay gamit an iskiris o ibang kagamitan na may layunin na magbagay ng bagong anyo o pagpapakintab.";
+          } else if (term === "threading") {
+            outputResult.value = "panudot";
+            definition.value = "Ang proseso ng pagtanggal ng mga buhok sa mukha o ibang bahagi ng katawan gamit ang isang thread o sinulid.";
+          } else if (term === "thread") {
+            outputResult.value = "sinulid o pisi";
+            definition.value = "Ang manipis na kahit na matibay na materyal na karaniwang ginagamit sa pagtahi o sa iba't ibang uri ng paggawa ng damit.";
+          } else if (term === "plucking") {
+            outputResult.value = "pagbunot";
+            definition.value = "pagbunot ng buhok sa kilay";
+          } else if (term === "pluck") {
+            outputResult.value = "pagbunot";
+            definition.value = "pagbunot ng buhok sa kilay";
+          } else if (term === "waving") {
+            outputResult.value = "pagkulot";
+            definition.value = "paraannin pag-aayos ng buhok gamit ang kulot.";
+          } else if (term === "wave") {
+            outputResult.value = "kulot";
+            definition.value = "Ang proseso ng pag-aayos ng buhok gamit ang kulot.";
+          } else if (term === "welding") {
+            outputResult.value = "pagwelding";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "weld") {
+            outputResult.value = "weld";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "stitching") {
+            outputResult.value = "pag-aagos";
+            definition.value = "Ang proseso ng pag-aagos nin mga buhok o mga bagay sa isang lugar.";
+          } else if (term === "stitch") {
+            outputResult.value = "stitch";
+            definition.value = "Ang proseso ng pag-aagos nin mga buhok o mga bagay sa isang lugar.";
+          } else if (term === "circuit") {
+            outputResult.value = "circuito";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "hydraulic") {
+            outputResult.value = "hydraulic";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "splice") {
+            outputResult.value = "splice";
+            definition.value = "Ang proseso ng pag-aagos nin mga buhok o mga bagay sa isang lugar.";
+          } else if (term === "conductor") {
+            outputResult.value = "conductor";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "insulator") {
+            outputResult.value = "insulator";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "ampere") {
+            outputResult.value = "ampere";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "voltage") {
+            outputResult.value = "voltage";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "resistor") {
+            outputResult.value = "resistor";
+            definition.value = "Ang proseso ng pag-aagos nin elektrisidad sa metal.";
+          } else if (term === "semantic web") {
+            outputResult.value = "Semantic Web";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "web") {
+            outputResult.value = "Web";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "database management system") {
+            outputResult.value = "Database Management System";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "database") {
+            outputResult.value = "Database";
+            definition.value = "Ini an conjunto nin mga programaasin proceso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "data") {
+            outputResult.value = "Data";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "operating system") {
+            outputResult.value = "Operating System";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "internet of things") {
+            outputResult.value = "Internet of Things";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "information system") {
+            outputResult.value = "Information System";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "data analytics") {
+            outputResult.value = "Data Analytics";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "encryption") {
+            outputResult.value = "Encryption";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "file management system") {
+            outputResult.value = "File Management System";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "file") {
+            outputResult.value = "File";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "stitching") {
+            outputResult.value = "Stitching";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "circuit") {
+            outputResult.value = "Circuit";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "hydraulic") {
+            outputResult.value = "Hydraulic";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "splice") {
+            outputResult.value = "Splice";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "conductor") {
+            outputResult.value = "Conductor";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "insulator") {
+            outputResult.value = "Insulator";
+            definition.value = "Ini an conjunto nin mga programa asin proceso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "ampere") {
+            outputResult.value = "Ampere";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "voltage") {
+            outputResult.value = "Voltage";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "resistor") {
+            outputResult.value = "Resistor";
+            definition.value = "Ini an conjunto nin mga programa asin proseso na nagpapahiling sa pag-organisa, pag-access, pag-edit, pag-save, asin pag-alis nin mga file o dukumento sa kompyuter o sistema nin impormasyon.";
+          } else if (term === "ssl") {
+            outputResult.value = "Secure Sockets Layer (SSL)";
+            definition.value = "Secure Sockets Layer (SSL) is a security protocol that provides encryption, authentication, and data integrity for communications over the internet.";
+          } else if (term === "terminal") {
+            outputResult.value = "terminal";
+            definition.value = "an lugar kun saen nagkatapos an pagbiyahe nin mga bus, tren, o iba pang transportasyon asin an mga pasahero nagbaba o nagtatawid papaluwas.";
+          } else if (term === "handfork") {
+            outputResult.value = "handfork";
+            definition.value = "sarong gamit na pang-agri o pang-obra na igwa nin punit-punit na pulaw na metal asin hawak nin tama, ginagamit para magtrabaho sa hardin, mag-aani, o iba pang aktibidad na nangangailangan nin paghukay o pag-ukit.";
+          } else if (term === "rotavator") {
+            outputResult.value = "rotabator";
+            definition.value = "sarong uri nin makina o kagamitan sa agrikultura na nagdadara nin mga pabilog na punit-punit na metal sa irarom ninda na ginagamit para maghukay o mag-ara nin lupa sa preparasyon para sa pananom";
+          } else if (term === "cultivation") {
+            outputResult.value = "pag-ara";
+            definition.value = "ang proseso nin pag-aalis nin damo, paghukay nin lupa, pagpanday nin paralubog, o iba pang aktibidad na nagsusulong nin maayos na pagmamaneho nin lupang para sa pananom o pagtatamnan.";
+          } else if (term === "corn dehusker") {
+            outputResult.value = "tagal-uto nin mais";
+            definition.value = "sarong kagamitan o makina na ginagamit para matatag an laman kan mais tikang sa dayak nito o bungang bilog.";
+          } else if (term === "plow") {
+            outputResult.value = "arado";
+            definition.value = "sarong kagamitan o kagamitan na may tama na ginagamit para mag-ara nin lupa sa preparasyon para sa pagtatamnan o pananom.";
+          } else if (term === "manure") {
+            outputResult.value = "kapiginan";
+            definition.value = "mga dungo o tae nin hayop na ginagamit bilang pataba sa lupa para sa pagpapalago nin pananom.";
+          } else if (term === "haul") {
+            outputResult.value = "padara";
+            definition.value = "ang aksyon o proseso nin pagdadara o pag-aari nin mga bagay o materyales sa sarong lugar patungo sa ibang lugar gamit an sasakyan o iba pang paraan nin transportasyon.";
+          } else if (term === "ditches") {
+            outputResult.value = "gadyan";
+            definition.value = "mga kanal o kanal na ginagamit para sa pagpapahali kan tubig tikang sa sarong lugar papunta sa iba pang lugar, o para sa iba pang pag-aari.";
+          } else if (term === "stumps") {
+            outputResult.value = "pugak";
+            definition.value = "mga parte nin puno o kahoy na nalalabi pagkatapos ito itanggas o itubog.";
+          } else if (term === "rake") {
+            outputResult.value = "mag-aaro o purum";
+            definition.value = "sarong gamit sa hardin na may mahabang sanga asin pabirit na pang-tinamaan na gamit para magtipon nin dahon, damo, o iba pang naman sa saiyang gilid.";
+          } else if (term === "tresher") {
+            outputResult.value = "traysir";
+            definition.value = "Sarong makina sa agrikultura na ginagamit para magputol nin dahan-dahan o tadtad an mga palay o iba pang pananom.";
+          } else if (term === "harrow") {
+            outputResult.value = "kakalahan";
+            definition.value ="sarong gamit sa agrikultura na binibitbit sa likod nin karabaw o tractor asin ginagamit para magtunton-tunton o magtunton-tunton sa lupa pagkatapos mag-ara.";
+          } else if (term === "saute") {
+            outputResult.value = "gurukan";
+            definition.value = "ang proseso nin pagluto nin pagkaon sa mantika sa kalan asin paghalo-halo kan mga sahog sa mauswag na temperatura, obserbahon sa pagluto nin pagkaon.";
+          } else if (term === "abrasive") {
+            outputResult.value = "magunung";
+            definition.value = "sarong materyal na hali sa abrasion, na ginagamit para sa pag-alis nin burak o kutsilyo sa kahoy o metal.";
+          } else if (term === "degreaser") {
+            outputResult.value = "pag-alis nin grasa";
+            definition.value = "sarong likido o kagamitan na ginagamit para sa pagtanggal nin grasa o langis sa mga kagamitan o surpilya.";
+          } else if (term === "grime") {
+            outputResult.value = "dumi";
+            definition.value = "ang madikit o malapit na kalapatan na nag-aandam sa isang bagay o lugar, gaya ng karbon, burak, o iba pang maruming substansiya.";
+          } else if (term === "rinse") {
+            outputResult.value = "hugas";
+            definition.value = "ang pagpaplantsa nin tubig sa isang bagay o materyal upang alisin ang mga residwal o natitirang sabon, kemikal, o iba pang maruming substansiya.";
+          } else if (term === "soak") {
+            outputResult.value = "mabilin";
+            definition.value = "pagpapabilin nin isang bagay o materyal sa tubig o ibang likido ng pansamantalang panahon, maabot an kinakailangan o hiling na kondisyon.";
+          } else if (term === "shred") {
+            outputResult.value = "gurukan";
+            definition.value = "ang proseso nin pag-guruk nin marhay na bahagi nin isang bagay o materyal, masuin an bahagi sa maliit na piraso o higot-higot.";
+          } else if (term === "garnish") {
+            outputResult.value = "gayak";
+            definition.value = "ang pagdagdag nin dekorasyon o hulyo sa ibabaw nin pagkaon bago ini serbahan, minasakit sa ibabaw kan pagkaon o nanunuya sa dulo kan pagkaon.";
+          } else if (term === "emulsion") {
+            outputResult.value = "emulsyon";
+            definition.value = "sarong kombinasyon nin duwang o mas dakul pang materyal na marayong malukso o malutu kan tubig, na ginagamit sa paghalo nin mga likido o pagpapagana kan tekstura kan pagkaon o ibang produkto.";
+          } else if (term === "basin") {
+            outputResult.value = "balde";
+            definition.value = "sarong kasangkapan na parahuman nin tubig, ginagamit sa paghugas nin kamot, pagpaplantsa, o iba pang gawain sa kusina o palibot kan balay.";
+          } else if (term === "faucet") {
+            outputResult.value = "gripo";
+            definition.value = "sarong kagamitan na may puhunan nin tubig na ginagamit para magpatubig nin maayo o kontrolado, obserbahon sa kusina o sa banyo.";
+          } else if (term === "scandisk") {
+            outputResult.value = "scandisk";
+            definition.value = "sarong kagamitan sa pag-checheck nin mga error sa sistema kan hard drive kan kompyuter asin pagtaram nin mga solusyon sa mga problemang matunton.";
+          } else if (term === "storage") {
+            outputResult.value = "tampunan";
+            definition.value = "sarong lugar o sistema nin pagtaram nin mga bagay o impormasyon para sa panahon nin hali oras o hanggang magkapera o ginagamit.";
+          } else if (term === "frequency") {
+            outputResult.value = "kadakul";
+            definition.value = "ang dami o panahon nin pagpapahiling o pagkakabisto nin sarong pangyayari o kondisyon sa sarong periodo nin panahon.";
+          } else if (term === "software") {
+            outputResult.value = "sirulohiya";
+            definition.value = "sarong grupo nin mga programa o aplikasyon na pumapasiring sa operasyon asin paggamit nin kompyuter, kasama an sistema operasyon, aplikasyon nin trabaho, asin iba pang kagamitan.";
+          } else if (term === "diode") {
+            outputResult.value = "diyodo";
+            definition.value = "sarong electronicong kagamitan na igwa nin duwang terminal na pigtutugotan an paso nin kuryente lang sa sarong direksyon, na may mga espesipikong aplikasyon sa elektronika.";
+          } else if (term === "knob") {
+            outputResult.value = "poknat";
+            definition.value = "sarong pyesa o hawakan na ginagamit para magpili, mag-control, o mag-adjust nin kaipuhan na kagamitan o makina, gaya nin isang volume knob sa radyo.";
+          } else if (term === "probe") {
+            outputResult.value = "suri-surihan";
+            definition.value = "sarong kasangkapan o instrumento na ginagamit para suri-surihan o imbestigahan an isang bagay o sitwasyon, lalo na sa konteksto nin siyensya o medisina.";
+          } else if (term === "transformer") {
+            outputResult.value = "transformador";
+            definition.value = "sarong electronicong kagamitan na ginagamit sa pagtukaw o pagliwag kan boltahe nin kuryente, gikan sa mataas na boltahe pakadto sa mas baba na boltahe, asin marhay na nagsasalin nin enerhiya sa pagitan nin duwang sistema nin kuryente.";
+          } else if (term === "scale") {
+            outputResult.value = "hagakhak";
+            definition.value = "sarong instrumento o sistema na gingagamit para magtukaw nin timbang nin sarong bagay o materyal, gaya nin timbang sa isang timbangan nin karne sa palengke.";
+          } else if (term === "caliper") {
+            outputResult.value = "kaliper";
+            definition.value = "sarong kasangkapan o instrumento na gingagamit para magtukaw nin distansya o diametro nin sarong bagay, na may duwang sinuwato na parte na magsusukat kan layo o kadakulan.";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+          } else if (term === "") {
+            outputResult.value = "";
+            definition.value = "";
+            
+          } else {
+            outputResult.value = "This word has yet to be added.";
+            definition.value = "No definition found.";
+          }
+        }
+      });
     });
-
-    languageSelect.addEventListener("change", () => {
-      inputTerm.value = ""; // Reset input term when language is changed
-      outputResult.value = ""; // Reset output
-      definition.value = ""; // Reset definition
-    });
-  </script>
-</body>
-</html> 
+    </script></body
+></html>
