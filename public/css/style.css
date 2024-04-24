@@ -21,22 +21,21 @@
 
 .text h1 .bilog {
   color: #ffd700;
+  font-size: 80px;
+  line-height: 80px;
 }
 
 .text h1 .translator {
   color: rgb(173, 169, 169);
   margin-left: 10px; /* Added margin for spacing */
+  font-size: 80px;
+  line-height: 80px;
 }
 
 .input-box, .output-box, .definition-box {
   width: calc(33.33% - 20px); /* Adjusted to take one-third width with padding accounted for */
   padding: 5px;
   font-size: 18px;
-}
-
-h1{
-  font-size: 80px;
-  line-height: 80px;
 }
 
 .input-box {
@@ -52,3 +51,10 @@ h1{
   height: 100px; /* Adjusted height */
 }
 
+@media screen and (max-width: 600px)
+{
+  .text h1{
+    font-size: 36px:
+    line-height: 36px:
+  }
+}
