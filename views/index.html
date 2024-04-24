@@ -172,48 +172,39 @@
         } else {
           outputResult.value = "This word has yet to be added.";
           definition.value = "No definition found.";
-        } else if (term === "snitching") {
-          outputResult.value = "pagpapahiling nin seguro";
-          definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
-        } else if (term === "pisot") {
-          outputResult.value = "ikaw";
-          definition.value = "ligo na.";
-      }
-      } 
-      
-      else if (selectedLanguage === "english") {
+        }
+      } else if (selectedLanguage === "english") {
         if (term === "create") {
           outputResult.value = "himo";
-          definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";   
-        } 
-        else {
+          definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
+        } else {
           outputResult.value = "This word has yet to be added.";
-          definition.value = "No definition found.";}
-        if (term === "create") {
-        outputResult.value = "himo";
-        definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
-      } else if (term === "current") {
-        outputResult.value = "dalagan";
-        definition.value = "ang kasalukuyang pag-aagos nin elektrisidad sa circuito.";
-      } else if (term === "electrode") {
-        outputResult.value = "electrode";
-        definition.value = "isang patpat o batang metal na ginagamit sa welding na nagpapakain ng metal.";
-      } else if (term === "snitching") {
-        outputResult.value = "pagpapahiling nin seguro";
-        definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
-      } else if (term === "arc") {
-        outputResult.value = "ark";
-        definition.value = "ang singaw na nagmumula sa pagtao nin init ng electrical discharge.";
-      } else if (term === "arc length") {
-        outputResult.value = "kapkad nin ark";
-        definition.value = "ang distansya hale sa electrode papalayu sa base metal.";
-      } else if (term === "shielded") {
-        outputResult.value = "ginaprotectahan";
-        definition.value = "ang welding process na ginaprotektahan an ark sa pamamagitan nin gas o slag.";
-      } else {
-        outputResult.value = "I have no idea what you're asking for.";
-        definition.value = "I have no idea what you're asking for.";
-      }
+          definition.value = "No definition found.";
+        }if (term === "create") {
+  outputResult.value = "himo";
+  definition.value = "paghimo nin bagay o proseso nin pagproduhir nin bagay na may pagkamadali o pagkahatid.";        
+} else if (term === "current") {
+  outputResult.value = "dalagan";
+  definition.value = "ang kasalukuyang pag-aagos nin elektrisidad sa circuito.";
+} else if (term === "electrode") {
+  outputResult.value = "electrode";
+  definition.value = "isang patpat o batang metal na ginagamit sa welding na nagpapakain ng metal.";
+} else if (term === "snitching") {
+  outputResult.value = "pagpapahiling nin seguro";
+  definition.value = "pagkokonsumo nin metal sa welding dahil sa dili magayon na pagtuhog o paghiling.";
+} else if (term === "arc") {
+  outputResult.value = "ark";
+  definition.value = "ang singaw na nagmumula sa pagtao nin init ng electrical discharge.";
+} else if (term === "arc length") {
+  outputResult.value = "kapkad nin ark";
+  definition.value = "ang distansya hale sa electrode papalayu sa base metal.";
+} else if (term === "shielded") {
+  outputResult.value = "ginaprotectahan";
+  definition.value = "ang welding process na ginaprotektahan an ark sa pamamagitan nin gas o slag.";
+} else {
+  outputResult.value = "I have no idea what you're asking for.";
+  definition.value = "I have no idea what you're asking for.";
+}
 
       }
     });
