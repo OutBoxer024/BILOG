@@ -34,6 +34,11 @@
   font-size: 18px;
 }
 
+h1{
+  font-size: 80px;
+  line-height: 80px;
+}
+
 .input-box {
   margin-right: 20px; /* Added margin to separate the input boxes */
 }
@@ -46,3 +51,4 @@
 .definition-box textarea {
   height: 100px; /* Adjusted height */
 }
+
