@@ -1,91 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head
-    ><title>Majestic Incompatible Beaver</title
-    ><meta property="og:title" content="Majestic Incompatible Beaver" /><meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" /><meta
-      charset="utf-8" /><meta
-      property="twitter:card"
-      content="summary_large_image" />
-      
-      <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }</style
-    ><style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BILOG TRANSLATOR</title>
+  <style>
+    /* Existing CSS styles */
+    .container {
+      display: flex;
+      align-items: center;
+    }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+    .image {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-      }</style
-    >
-    </head
-  ><body
-    ><link rel="stylesheet" href="../public/css/style.css" /><div
-      ><link href="../public/css/index.css" rel="stylesheet" /><div class="home-container"
-        ><header data-role="Header" class="home-header"
-          ><img
-            src="https://i.ibb.co/7Wmtnkp/BILOG-logo.png"
-            class="home-image" /><h1 class="home-text">BILOG</h1
-          ><h1 class="home-text01">TRANSLATE</h1
-          ></header
-        ><div class="home-testimonial"
-          ><div class="home-container2"
-            ><h1 class="home-text02"><span>PLACEHOLDER</span><br /></h1
-            ><span class="home-text05">Please select language input:</span
-            ><select id="language-select" name="language-select"
-              ><option value="english">English</option
-              ><option value="bicol">Bicol</option
-            ></select
-            ></br
-            ><div class="home-container3"
-              ><div class="home-container4"
-                ><span class="home-text06"><span>INPUT:</span><br /></span
-                ><textarea
-                  type="text"
-                  id="input-term" 
-                  name="input-term"
-                  placeholder="Your text / Ang iyong teksto"
-                  class="home-textinput input"></textarea></div
-              ><div class="home-container5"
-                ><span class="home-text09"><span>TRANSLATION:</span><br /></span
-                ><textarea
-                  id="output-result" 
-                  name="output-result" 
-                  readonly
-                  class="home-textarea textarea"
-                ></textarea></div
-              ><div class="home-container6"
-                ><span class="home-text12"><span>DEFINITION:</span><br /></span
-                ><textarea
-                  id="definition" 
-                  name="definition" 
-                  readonly
-                  class="home-textarea1 textarea"
-                ></textarea></div></div></div></div
-        ><div class="home-banner"
-          ><h1 class="home-text15">ABOUT</h1
-          ><span class="home-text16"
-            >This website was created in compliance with the requirements of
-            Practical Research II.</span
-          ><a
-            href="mailto:andrewlupenario6@gmail.com?subject=Regarding BILOG Translation"
-            class="home-link button"
-            >Contact Us</a
-          ></div
-        ></div
-      ></div
-    >
+    .text {
+      font-size: 30px;
+      padding-left: 30px;
+    }
+
+    .text h1 {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      display: flex;
+      align-items: center; /* Align text vertically */
+    }
+
+    .text h1 .bilog {
+      color: #ffaa00;
+    }
+
+    .text h1 .translator {
+      color: rgb(173, 169, 169);
+      margin-left: 10px; /* Added margin for spacing */
+    }
+
+    .input-box, .output-box, .definition-box {
+      width: calc(33.33% - 20px); /* Adjusted to take one-third width with padding accounted for */
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .input-box {
+      margin-right: 20px; /* Added margin to separate the input boxes */
+      margin-top: 300px; /* Added margin to separate the input boxes */
+    }
+
+    .output-box, .definition-box, .input-box {
+      border: 10px solid #ffffff;
+      margin-top: -30px;
+      margin-right: 40px;
+    }
+
+    .definition-box textarea {
+      height: 100px; /* Adjusted height */
+    }
+
+    .output-box textarea,
+    .definition-box textarea {
+      height: 50px;
+    }
+
+    label[for="language-select"] {
+      color:rgb(255, 123, 0); /* Changed color */
+    }
+
+    label[for="input-term"] {
+      color:rgb(255, 123, 0); /* Changed color */
+    }
+
+    label[for="output-result"] {
+      color:rgb(145, 145, 145); /* Changed color */
+    }
+    
+    label[for="definition"] {
+      color:rgb(145, 145, 145); /* Changed color */
+    }
+    
+    label[for="language-select"],
+    label[for="input-term"],
+    label[for="output-result"],
+    label[for="definition"] {
+      font-size: 35px; /* Increase font size for labels */
+    }
+
+    .contact-button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffaa00;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <a href="#" target="_blank" rel="noopener" title="BILOG BILOG">
+        <img
+          src="https://i.ibb.co/7Wmtnkp/BILOG-logo.png"
+          alt="BILOG LOGO"
+          width="100"
+        />
+      </a>
+    </div>
+    <div class="text">
+      <h1>
+        <span class="bilog">BILOG</span>
+        <span class="translator">TRANSLATION</span>
+      </h1>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h3 style="font-family: Helvetica; color: rgb(255, 0, 0);">
+    NOTE: Please only use lowercase letters when inputting terms
+  </h3>
+  
+  <br>
+  
+  <div class="container">
+    <div class="input-box">
+      <label for="language-select">Select Language to Translate:</label>
+      <select id="language-select" name="language-select">
+        <option value="english">English</option>
+        <option value="bicol">Bicol</option>
+      </select>
+      <br />
+      <label for="input-term" >Enter a term:</label>
+      <input type="text" id="input-term" name="input-term" />
+    </div>
+    <div class="output-box">
+      <label for="output-result">Translation:</label>
+      <textarea id="output-result" name="output-result" readonly></textarea>
+    </div>
+    <div class="definition-box">
+      <label for="definition">Definition:</label>
+      <textarea id="definition" name="definition" readonly></textarea>
+    </div>
+  </div>
+
+  <a class="contact-button" href="mailto:alupenario6@gmail.com">
+    Contact Us
+  </a>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const inputTerm = document.getElementById("input-term");
