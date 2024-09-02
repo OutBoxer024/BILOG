@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>ASSHATS</title> 
+ </head>
+<style>
+body {
+  margin: 0;
+}
+
+.nav-bar {
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo img {
+  width: 50px; /* adjust the width to fit your logo */
+  height: auto;
+}
+
+.contact-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #ccc;
+}
+
+.video-background {
+  position: relative;
+  width: 100vw; /* take up the full width of the parent element */
+  height: 100vh; /* take up the full height of the viewport */
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* move the video behind the text */
+}
+
+.vidtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; 
+  z-index: 1; 
+}
+
+.vidtext h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 10px; /* add some space between the title and subtitle */
+}
+
+.vidtext p {
+  text-shadow: 1px 1px 1px #000;
+  font-size: 20px; /* adjust the font size to your liking */
+}
+</style> 
+ <body> 
+  <nav class="nav-bar"> 
+   <div class="logo"> 
+    <img src="logo.png" alt="Website Logo"> 
+   </div> <button class="contact-btn">Contact</button> 
+  </nav> 
+  <div class="video-background"> 
+   <video autoplay loop muted> 
+    <source src="https://streamable.com/24mloa" type="video/mp4"> 
+   </video> 
+   <div class="vidtext"> 
+    <h1>ASSHATS</h1> 
+    <p>A PAIN IN THE ARSE,<br>JUST LIKE YOU</p> 
+   </div> 
+  </div> 
+  <div> 
+   <h1>Form Submission</h1> 
+   <form id="myForm"> <label for="inputField">Enter some text:</label> 
+    <input type="text" id="inputField" name="inputField"> 
+    <br> 
+    <br> 
+    <input type="submit" value="Submit"> 
+   </form> 
+   <div id="submissionHistory"> 
+    <h2>Previous Submissions:</h2> 
+    <ul id="submissionList"> <!-- previous submissions will be listed here --> 
+    </ul> 
+   </div> 
+  </div> 
+ </body>
+
+<script>
+const form = document.getElementById('myForm');
+    const submissionList = document.getElementById('submissionList');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // prevent page reload
+
+      const inputField = document.getElementById('inputField');
+      const userInput = inputField.value;
+
+      // create a new list item for the submission
+      const listItem = document.createElement('li');
+      listItem.textContent = userInput;
+
+      // add the list item to the submission list
+      submissionList.appendChild(listItem);
+
+      // reset the input field
+      inputField.value = '';
+    });
+</script>
+</html>
